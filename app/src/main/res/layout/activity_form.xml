@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,7 +37,7 @@
                 android:hint="Name"
                 android:inputType="text"
                 android:maxLines="1"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/editContact"
@@ -53,7 +52,7 @@
                 android:hint="Contact Number"
                 android:inputType="text"
                 android:maxLines="1"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/editIn"
@@ -68,7 +67,7 @@
                 android:hint="Check In"
                 android:inputType="date"
                 android:maxLines="1"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/editOut"
@@ -83,7 +82,7 @@
                 android:hint="Check Out"
                 android:inputType="date"
                 android:maxLines="1"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/numPeople"
@@ -98,7 +97,7 @@
                 android:hint="No. of Persons"
                 android:inputType="date"
                 android:maxLines="1"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -124,7 +123,7 @@
                 android:id="@+id/btnPrev"
                 android:layout_width="400dp"
                 android:layout_height="50dp"
-                android:background="#00000"
+                android:background="#00000000"
                 android:text="PREVIOUS"
                 android:textColor="@color/black"
                 android:textStyle="bold"

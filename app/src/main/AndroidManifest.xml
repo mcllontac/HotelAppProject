@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelProject"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true">
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,6 +27,17 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity android:name=".ConfirmActivity"/>
+        <activity android:name=".FormActivity"/>
+        <activity android:name=".PaymentActivity"/>
+        <activity android:name=".ReferenceActivity"/>
+        <activity android:name=".ReferenceNumActivity"/>
+        <activity android:name=".ReservationsActivity"/>
+        <activity android:name=".RoomsActivity"/>
+        <activity android:name=".TermsActivity"/>
     </application>
+
+
 
 </manifest>

@@ -20,20 +20,14 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.button);
         btn2 = findViewById(R.id.button2);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),TermsActivity.class);
-                startActivity(i);
-            }
+        btn1.setOnClickListener(view -> {
+            Intent i = new Intent(getApplicationContext(),TermsActivity.class);
+            startActivity(i);
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),TermsActivity.class);
-                startActivity(i);
-            }
+        btn2.setOnClickListener(view -> {
+            Intent i = new Intent(getApplicationContext(),TermsActivity.class);
+            startActivity(i);
         });
 
 
