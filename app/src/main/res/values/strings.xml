@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HotelProject</string>
+
+    <string name="string_desc1"><b>Azalea Room</b>
+        You\'ll be in a good mood every time you enter this garden-themed room. A queen-size bed, air conditioning, in-room movies, a dinette, a dresser, a bathtub, a hot and cold shower, a hair dryer, and a safety deposit box are among the amenities.</string>
+    <string name="string_desc2"><b>Japanese Room</b>
+        This themed room, created with the same precision and passion that made Japanese ingenuity famous worldwide, provides comfort and convenience through excellent appointments and standard amenities. A twin-size bed, air conditioning, an LED TV with cable channels, in-room movies, and a hot and cold shower are among the amenities.</string>
+    <string name="string_desc3"><b>Deluxe Room</b>
+        The Premium Room is ideal for solo travelers and couples who don\'t need much space. The room is small and cozy, with a twin-size bed, air conditioning, an LED TV with cable channels and in-room movies, and a hot and cold shower</string>
 </resources>
