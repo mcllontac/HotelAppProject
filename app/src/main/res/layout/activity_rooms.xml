@@ -17,86 +17,78 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="5">
+        android:weightSum="7">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/room1"
-                android:layout_weight="1"
-                android:padding="15dp"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/room2"
-                android:layout_weight="1"
-                android:padding="15dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <ImageView
+                android:id="@+id/room1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/room3"
-                android:layout_weight="1"
+                android:layout_weight="0.8"
                 android:padding="15dp"/>
-
-            <ImageView
+            <TextView
+                android:padding="6dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/room4"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:padding="15dp"/>
+                android:text="@string/string_desc1"
+                android:textColor="@color/black"/>
+
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
             <ImageView
+                android:id="@+id/room2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/room5"
-                android:layout_weight="1"
+                android:src="@drawable/room9"
+                android:layout_weight="0.8"
                 android:padding="15dp"/>
+            <TextView
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/string_desc2"
+                android:textColor="@color/black"
+                android:textSize="12.75sp"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/room6"
-                android:layout_weight="1"
-                android:padding="15dp"/>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2">
+
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/room7"
-                android:layout_weight="1"
-                android:padding="15dp"/>
-
-            <ImageView
+                android:id="@+id/room3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/room8"
-                android:layout_weight="1"
+                android:layout_weight="0.8"
                 android:padding="15dp"/>
+            <TextView
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/string_desc3"
+                android:textColor="@color/black"/>
+
         </LinearLayout>
 
 
