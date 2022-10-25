@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#D2001A"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".PaymentActivity">
 
     <LinearLayout
@@ -49,7 +50,8 @@
             android:background="#FFFAE7"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:hint="Total Amount Details"/>
     </LinearLayout>
 
     <LinearLayout
@@ -76,7 +78,8 @@
             android:background="#FFFAE7"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:hint="Enter Payment"/>
     </LinearLayout>
 
     <LinearLayout
@@ -103,7 +106,8 @@
             android:background="#FFFAE7"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:hint="Your Change"/>
     </LinearLayout>
 
     <LinearLayout

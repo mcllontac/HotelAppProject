@@ -52,7 +52,8 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:hint="Name Details"/>
     </LinearLayout>
 
     <LinearLayout
@@ -80,6 +81,7 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
+            android:hint="Contact No. Details"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -107,6 +109,7 @@
             android:background="#FFFAE7"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
+            android:hint="Check in Details"
             android:textColor="#000000"
             android:textSize="20sp" />
     </LinearLayout>
@@ -136,6 +139,7 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
+            android:hint="Check Out Details"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -164,7 +168,8 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:hint="No. of pax Details"/>
     </LinearLayout>
 
     <LinearLayout
@@ -192,7 +197,8 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:hint="Room Type Details"/>
     </LinearLayout>
 
     <LinearLayout
