@@ -52,7 +52,7 @@
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/teal_700"
                 android:hint="Contact Number"
-                android:inputType="text"
+                android:inputType="number"
                 android:maxLines="1"
                 android:textColor="@color/black" />
 
@@ -97,7 +97,7 @@
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/teal_700"
                 android:hint="No. of Persons"
-                android:inputType="date"
+                android:inputType="number"
                 android:maxLines="1"
                 android:textColor="@color/black" />
         </LinearLayout>
