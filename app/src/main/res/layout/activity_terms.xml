@@ -49,7 +49,7 @@
             android:background="@drawable/shadows"
             android:backgroundTint="#FFFAE7"
             android:elevation="10dp"
-            android:text="This Application (estore.togo.com.ph) (&quot;this Site&quot; or “TOGO eStore”) is owned and operated by TOGO Philippines Co., Ltd. (&quot;TOGO&quot;) in Philippines. Access to and use of this App and related services (collectively, the “Services”) are made available to you in accordance with the following Terms & Conditions and any other rules, policies and privacy policy posted on the App. By using the Services, such as browsing or placing orders on this App, you are agreeing to all of the Terms and Conditions and that you accept and agree to be bound by them."
+            android:text="This Application (estore.togo.com.ph) (&quot;this Site&quot; or “TOGO eStore”) is owned and operated by TOGO Philippines Co., Ltd. (&quot;TOGO&quot;) in Philippines. Access to and use of this App and related services (collectively, the “Services”) are made available to you in accordance with the following Terms &amp; Conditions and any other rules, policies and privacy policy posted on the App. By using the Services, such as browsing or placing orders on this App, you are agreeing to all of the Terms and Conditions and that you accept and agree to be bound by them."
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
