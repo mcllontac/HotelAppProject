@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "315844014017",
+    "project_id": "togo-f144f",
+    "storage_bucket": "togo-f144f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315844014017:android:b2414723b2ff044a724940",
+        "android_client_info": {
+          "package_name": "com.example.hotelproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315844014017-ga7fdantokls1ih0pi6m37eusg3ndgah.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hotelproject",
+            "certificate_hash": "a3f060420694ebb29c691fd9bdcfebb9ffcbaae3"
+          }
+        },
+        {
+          "client_id": "315844014017-c4bnoi5lgvljf20ibgdehn4irnp5pej5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvA3zoWL3OQO62jEd35nTap3DDcFJAssQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315844014017-c4bnoi5lgvljf20ibgdehn4irnp5pej5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

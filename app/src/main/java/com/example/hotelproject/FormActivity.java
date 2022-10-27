@@ -13,6 +13,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -24,6 +27,8 @@ public class FormActivity extends AppCompatActivity {
     EditText checkIn, checkOut, name, contact, persons;
     Button next;
     Button prev;
+
+
 
 
     @Override
@@ -93,10 +98,14 @@ public class FormActivity extends AppCompatActivity {
 
 
 
+
+
         prev.setOnClickListener(view -> {
             Intent i = new Intent(getApplicationContext(), TermsActivity.class);
             startActivity(i);
         });
+
+
     }
 
     private void updateOut() {
