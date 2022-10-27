@@ -74,9 +74,17 @@ public class ReferenceActivity extends AppCompatActivity {
         });
 
 
+
+
         next.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), ReferenceNumActivity.class);
-            startActivity(intent);
+            Intent nintent = new Intent(ReferenceActivity.this, ReferenceNumActivity.class);
+            nintent.putExtra("roomtype",roomType1);
+            nintent.putExtra("name",name1);
+            nintent.putExtra("contact",contact1);
+            nintent.putExtra("numberofpersons",persons1);
+            nintent.putExtra("checkin",checkIn1);
+            nintent.putExtra("checkout",checkOut1);
+            startActivity(nintent);
         });
 
 

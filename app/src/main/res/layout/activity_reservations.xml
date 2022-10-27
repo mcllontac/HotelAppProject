@@ -51,7 +51,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/textName"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -61,7 +61,7 @@
             android:hint="Name Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -84,7 +84,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textContact"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -94,7 +94,7 @@
             android:hint="Contact No. Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -117,7 +117,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/textCheckIn"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -127,7 +127,7 @@
             android:hint="Check in Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -150,7 +150,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/textCheckOut"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -160,7 +160,7 @@
             android:hint="Check Out Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -183,7 +183,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/textPax"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -193,7 +193,7 @@
             android:hint="No. of pax Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -216,7 +216,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/textRoom"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -224,7 +224,7 @@
             android:hint="Room Type Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp" />
