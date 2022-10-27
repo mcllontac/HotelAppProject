@@ -55,29 +55,25 @@ public class ConfirmActivity extends AppCompatActivity {
         iView.setText(checkIn);
         oView.setText(checkOut);
 
-        String text = spinner.getSelectedItem().toString();
+        String room = spinner.getSelectedItem().toString();
 
 
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ConfirmActivity.this,PaymentActivity.class);
-                intent.putExtra("roomtype",text);
-                intent.putExtra("name",name);
-                intent.putExtra("contact",contact);
-                intent.putExtra("numberofpersons",numberofpersons);
-                intent.putExtra("checkin",checkIn);
-                intent.putExtra("checkout",checkOut);
-                startActivity(intent);
+                Intent nintent = new Intent(ConfirmActivity.this,PaymentActivity.class);
+                nintent.putExtra("roomtype",room);
+                nintent.putExtra("name",name);
+                nintent.putExtra("contact",contact);
+                nintent.putExtra("numberofpersons",numberofpersons);
+                nintent.putExtra("checkin",checkIn);
+                nintent.putExtra("checkout",checkOut);
+                startActivity(nintent);
             }
         });
 
 
 
-        proceed.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),PaymentActivity.class);
-            startActivity(intent);
-        });
 
         back.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(),RoomsActivity.class);

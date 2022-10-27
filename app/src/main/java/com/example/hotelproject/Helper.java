@@ -1,19 +1,18 @@
 package com.example.hotelproject;
 
 public class Helper {
-    String name, contact, checkIn, checkOut, persons, room;
+    String name, contact, checkIn, checkOut, persons, room, rnum;
 
-    public Helper(String NAME, String CONTACT, String PERSONS, String IN, String OUT) {
 
-    }
 
-    public Helper(String name, String contact, String checkIn, String checkOut, String persons, String room) {
+    public Helper(String name, String contact, String checkIn, String checkOut, String persons, String room, String rnum) {
         this.name = name;
         this.contact = contact;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.persons = persons;
         this.room = room;
+        this.rnum = rnum;
     }
 
     public String getName() {
@@ -58,6 +57,14 @@ public class Helper {
 
     public String getRoom() {
         return room;
+    }
+
+    public String getRnum() {
+        return rnum;
+    }
+
+    public void setRnum(String rnum) {
+        this.rnum = rnum;
     }
 
     public void setRoom(String room) {
