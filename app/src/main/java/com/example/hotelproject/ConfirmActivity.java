@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -15,12 +16,16 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ConfirmActivity extends AppCompatActivity {
     Button proceed;
     Button back;
     String name,contact,numberofpersons,checkIn,checkOut;
     TextView nView, cView, pView, iView, oView;
     Spinner spinner;
+    List<String> items;
 
 
 
@@ -55,7 +60,17 @@ public class ConfirmActivity extends AppCompatActivity {
         iView.setText(checkIn);
         oView.setText(checkOut);
 
-        String room = spinner.getSelectedItem().toString();
+        items = new ArrayList<>();
+
+        items.add("Azalea");
+        items.add("Japanese");
+        items.add("Deluxe");
+
+        spinner.setAdapter(new ArrayAdapter<>(ConfirmActivity.this,
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items
+        ));
+
+
 
 
         proceed.setOnClickListener(new View.OnClickListener() {
