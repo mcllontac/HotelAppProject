@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -62,6 +63,7 @@ public class ConfirmActivity extends AppCompatActivity {
 
         items = new ArrayList<>();
 
+        items.add("--Select--");
         items.add("Azalea");
         items.add("Japanese");
         items.add("Deluxe");
@@ -70,6 +72,12 @@ public class ConfirmActivity extends AppCompatActivity {
                 androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items
         ));
 
+        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                items = items.get(position);
+            }
+        });
 
 
 
