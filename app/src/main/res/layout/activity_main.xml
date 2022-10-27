@@ -42,7 +42,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="418dp"
+        android:layout_width="0dp"
         android:layout_height="299dp"
         android:background="#D2001A"
         android:filterTouchesWhenObscured="false"

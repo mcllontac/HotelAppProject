@@ -24,6 +24,7 @@
                 android:id="@+id/room1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#D2001A"
                 android:src="@drawable/room3"
                 android:layout_weight="0.8"
                 android:padding="15dp"
@@ -46,13 +47,11 @@
 
             <ImageView
                 android:id="@+id/room2"
-                android:layout_width="200dp"
-                android:layout_height="127dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="45dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/shadows"
-                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:background="#D2001A"
+                android:padding="15dp"
                 android:src="@drawable/room9"
                 tools:ignore="NestedWeights" />
             <TextView
@@ -78,6 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/room8"
+                android:background="#D2001A"
                 android:layout_weight="0.8"
                 android:padding="15dp"
                 tools:ignore="NestedWeights" />
