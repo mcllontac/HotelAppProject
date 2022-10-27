@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2001A"
-    android:gravity="center"
+    android:background="#EFEFEF"
     android:orientation="vertical"
     tools:context=".ReferenceNumActivity">
 
@@ -19,10 +18,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#D2001A"
+            android:paddingTop="20dp"
             android:paddingBottom="25dp"
+            android:shadowColor="#E9000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="0.01"
             android:text="Reservation Number"
             android:textAlignment="center"
-            android:textColor="#000000"
+            android:textColor="#FFDE00"
             android:textSize="34sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -37,6 +42,8 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
             android:hint="Enter Reference Number Here"

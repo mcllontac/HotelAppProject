@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2001A"
-    android:gravity="center"
+    android:background="#EFEFEF"
     android:orientation="vertical"
     tools:context=".ConfirmActivity">
 
@@ -18,10 +17,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#D2001A"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:shadowColor="#E9000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="0.01"
             android:text="Confirmation"
             android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="34sp" />
+            android:textColor="#FFDE00"
+            android:textSize="34sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -32,9 +39,10 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/btn_dropdown"
             android:entries="@array/room"
-            android:textAlignment="center"
-            android:background="@android:drawable/btn_dropdown"/>
+            android:textAlignment="center" />
 
 
     </LinearLayout>
@@ -48,6 +56,8 @@
             android:id="@+id/textView5"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -59,6 +69,8 @@
             android:id="@+id/nameView"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
             android:backgroundTint="#FFFAE7"
@@ -77,6 +89,8 @@
             android:id="@+id/textView20"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -88,6 +102,8 @@
             android:id="@+id/contactView"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
             android:backgroundTint="#FFFAE7"
@@ -106,6 +122,8 @@
             android:id="@+id/textView21"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -117,6 +135,8 @@
             android:id="@+id/inView"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
             android:backgroundTint="#FFFAE7"
@@ -135,6 +155,8 @@
             android:id="@+id/textView22"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -146,6 +168,8 @@
             android:id="@+id/outView"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
             android:backgroundTint="#FFFAE7"
@@ -175,6 +199,8 @@
             android:id="@+id/paxView"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
             android:backgroundTint="#FFFAE7"

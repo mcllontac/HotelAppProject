@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2001A"
-    android:gravity="center"
+    android:background="#EFEFEF"
     android:orientation="vertical"
     tools:context=".ReservationsActivity">
 
@@ -18,11 +17,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#D2001A"
+            android:paddingTop="20dp"
             android:paddingBottom="25dp"
+            android:shadowColor="#DD000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="0.01"
             android:text="Reservation Details"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="#040404"
+            android:textColor="#FFDE00"
             android:textSize="34sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -36,6 +41,8 @@
             android:id="@+id/textView8"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -47,13 +54,15 @@
             android:id="@+id/textView14"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
+            android:hint="Name Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
-            android:textSize="20sp"
-            android:hint="Name Details"/>
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,6 +74,8 @@
             android:id="@+id/textView9"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -76,12 +87,14 @@
             android:id="@+id/textView15"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
+            android:hint="Contact No. Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
-            android:hint="Contact No. Details"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -94,6 +107,8 @@
             android:id="@+id/textView10"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -105,11 +120,13 @@
             android:id="@+id/textView16"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
+            android:hint="Check in Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:hint="Check in Details"
             android:textColor="#000000"
             android:textSize="20sp" />
     </LinearLayout>
@@ -123,6 +140,8 @@
             android:id="@+id/textView11"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -134,12 +153,14 @@
             android:id="@+id/textView17"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
+            android:hint="Check Out Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
-            android:hint="Check Out Details"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -152,6 +173,8 @@
             android:id="@+id/textView12"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -163,13 +186,15 @@
             android:id="@+id/textView19"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
+            android:hint="No. of pax Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
-            android:textSize="20sp"
-            android:hint="No. of pax Details"/>
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -181,6 +206,8 @@
             android:id="@+id/textView13"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -194,11 +221,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#FFFAE7"
+            android:hint="Room Type Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="#000000"
             android:textSize="20sp"
-            android:hint="Room Type Details"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
     </LinearLayout>
 
     <LinearLayout
