@@ -21,11 +21,9 @@ public class FormActivity extends AppCompatActivity {
 
 
     final Calendar myCalendar = Calendar.getInstance();
-    EditText checkIn,checkOut;
+    EditText checkIn, checkOut, name, contact, persons;
     Button next;
     Button prev;
-
-
 
 
     @Override
@@ -33,17 +31,20 @@ public class FormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
 
-       checkIn= findViewById(R.id.editIn);
-       checkOut= findViewById(R.id.editOut);
-       next = findViewById(R.id.btnNext);
-       prev = findViewById(R.id.btnPrev);
+        checkIn = findViewById(R.id.editIn);
+        checkOut = findViewById(R.id.editOut);
+        name = findViewById(R.id.editName);
+        contact = findViewById(R.id.editContact);
+        persons = findViewById(R.id.numPeople);
+        next = findViewById(R.id.btnNext);
+        prev = findViewById(R.id.btnPrev);
 
-        DatePickerDialog.OnDateSetListener InDate =new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog.OnDateSetListener InDate = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 myCalendar.set(Calendar.YEAR, year);
-                myCalendar.set(Calendar.MONTH,month);
-                myCalendar.set(Calendar.DAY_OF_MONTH,day);
+                myCalendar.set(Calendar.MONTH, month);
+                myCalendar.set(Calendar.DAY_OF_MONTH, day);
                 updateIn();
             }
         };
@@ -51,17 +52,17 @@ public class FormActivity extends AppCompatActivity {
         checkIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            DatePickerDialog inDate =   new DatePickerDialog(FormActivity.this,InDate,myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH));
-            inDate.show();
+                DatePickerDialog inDate = new DatePickerDialog(FormActivity.this, InDate, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
+                inDate.show();
             }
         });
 
-        DatePickerDialog.OnDateSetListener OutDate =new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog.OnDateSetListener OutDate = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 myCalendar.set(Calendar.YEAR, year);
-                myCalendar.set(Calendar.MONTH,month);
-                myCalendar.set(Calendar.DAY_OF_MONTH,day);
+                myCalendar.set(Calendar.MONTH, month);
+                myCalendar.set(Calendar.DAY_OF_MONTH, day);
                 updateOut();
             }
         };
@@ -69,32 +70,44 @@ public class FormActivity extends AppCompatActivity {
         checkOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            DatePickerDialog outDate =   new DatePickerDialog(FormActivity.this,OutDate,myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH));
-            outDate.show();
+                DatePickerDialog outDate = new DatePickerDialog(FormActivity.this, OutDate, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
+                outDate.show();
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FormActivity.this,RoomsActivity.class);
+                intent.putExtra("name",name.getText().toString());
+                intent.putExtra("contact",contact.getText().toString());
+                intent.putExtra("numberofpersons",persons.getText().toString());
+                intent.putExtra("checkin",checkIn.getText().toString());
+                intent.putExtra("checkout",checkOut.getText().toString());
+                startActivity(intent);
             }
         });
 
 
-        next.setOnClickListener(view -> {
-            Intent i = new Intent(getApplicationContext(),RoomsActivity.class);
-            startActivity(i);
-        });
+
+
+
 
         prev.setOnClickListener(view -> {
-            Intent i = new Intent(getApplicationContext(),TermsActivity.class);
+            Intent i = new Intent(getApplicationContext(), TermsActivity.class);
             startActivity(i);
         });
     }
 
-    private void updateOut(){
-        String myFormat="MM/dd/yy";
-        SimpleDateFormat dateFormat=new SimpleDateFormat(myFormat, Locale.US);
+    private void updateOut() {
+        String myFormat = "MM/dd/yy";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.US);
         checkOut.setText(dateFormat.format(myCalendar.getTime()));
     }
 
-    private void updateIn(){
-        String myFormat="MM/dd/yy";
-        SimpleDateFormat dateFormat=new SimpleDateFormat(myFormat, Locale.US);
+    private void updateIn() {
+        String myFormat = "MM/dd/yy";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.US);
         checkIn.setText(dateFormat.format(myCalendar.getTime()));
     }
 }

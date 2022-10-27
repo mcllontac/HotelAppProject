@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btn2.setOnClickListener(view -> {
-            Intent i = new Intent(getApplicationContext(),TermsActivity.class);
+            Intent i = new Intent(getApplicationContext(),ReferenceNumActivity.class);
             startActivity(i);
         });
 
