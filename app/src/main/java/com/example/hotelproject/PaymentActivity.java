@@ -37,10 +37,6 @@ public class PaymentActivity extends AppCompatActivity {
         checkOut = i.getStringExtra("checkout");
         room = i.getStringExtra("roomtype");
 
-        pax = Integer.valueOf(persons);
-
-
-
 
 
 
