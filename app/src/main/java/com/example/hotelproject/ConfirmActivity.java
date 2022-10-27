@@ -23,11 +23,9 @@ import java.util.List;
 public class ConfirmActivity extends AppCompatActivity {
     Button proceed;
     Button back;
-    String name,contact,numberofpersons,checkIn,checkOut;
+    String name, contact, numberofpersons, checkIn, checkOut;
     TextView nView, cView, pView, iView, oView;
     Spinner spinner;
-
-
 
 
     @Override
@@ -45,14 +43,12 @@ public class ConfirmActivity extends AppCompatActivity {
         spinner = findViewById(R.id.selection);
 
 
-
         Intent i = getIntent();
         name = i.getStringExtra("name");
         contact = i.getStringExtra("contact");
         numberofpersons = i.getStringExtra("numberofpersons");
         checkIn = i.getStringExtra("checkin");
         checkOut = i.getStringExtra("checkout");
-
 
 
         nView.setText(name);
@@ -62,31 +58,23 @@ public class ConfirmActivity extends AppCompatActivity {
         oView.setText(checkOut);
 
 
-
-        String room = spinner.getSelectedItem().toString();
-
-
-
-
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nintent = new Intent(ConfirmActivity.this,PaymentActivity.class);
-                nintent.putExtra("roomtype",room);
-                nintent.putExtra("name",name);
-                nintent.putExtra("contact",contact);
-                nintent.putExtra("numberofpersons",numberofpersons);
-                nintent.putExtra("checkin",checkIn);
-                nintent.putExtra("checkout",checkOut);
+                Intent nintent = new Intent(ConfirmActivity.this, PaymentActivity.class);
+                nintent.putExtra("roomtype", spinner.getSelectedItem().toString());
+                nintent.putExtra("name", name);
+                nintent.putExtra("contact", contact);
+                nintent.putExtra("numberofpersons", numberofpersons);
+                nintent.putExtra("checkin", checkIn);
+                nintent.putExtra("checkout", checkOut);
                 startActivity(nintent);
             }
         });
 
 
-
-
         back.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),RoomsActivity.class);
+            Intent intent = new Intent(getApplicationContext(), RoomsActivity.class);
             startActivity(intent);
         });
     }
