@@ -67,9 +67,11 @@
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/teal_700"
                 android:hint="Check In"
-                android:inputType="date"
-                android:maxLines="1"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
 
             <EditText
                 android:id="@+id/editOut"
@@ -84,7 +86,11 @@
                 android:hint="Check Out"
                 android:inputType="date"
                 android:maxLines="1"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
 
             <EditText
                 android:id="@+id/numPeople"
