@@ -81,7 +81,7 @@ public class FormActivity extends AppCompatActivity {
         });
 
         prev.setOnClickListener(view -> {
-            Intent i = new Intent(getApplicationContext(),RoomsActivity.class);
+            Intent i = new Intent(getApplicationContext(),TermsActivity.class);
             startActivity(i);
         });
     }

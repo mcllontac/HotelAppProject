@@ -7,4 +7,11 @@
         This themed room, created with the same precision and passion that made Japanese ingenuity famous worldwide, provides comfort and convenience through excellent appointments and standard amenities. A twin-size bed, air conditioning, an LED TV with cable channels, in-room movies, and a hot and cold shower are among the amenities.</string>
     <string name="string_desc3"><b>Deluxe Room</b>
         The Premium Room is ideal for solo travelers and couples who don\'t need much space. The room is small and cozy, with a twin-size bed, air conditioning, an LED TV with cable channels and in-room movies, and a hot and cold shower</string>
+    <string-array name="room">
+        <item>Select</item>
+        <item>Azalea</item>
+        <item>Japanese</item>
+        <item>Deluxe</item>
+    </string-array>
+
 </resources>
