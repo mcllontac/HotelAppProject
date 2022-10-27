@@ -26,7 +26,7 @@ public class ConfirmActivity extends AppCompatActivity {
     String name,contact,numberofpersons,checkIn,checkOut;
     TextView nView, cView, pView, iView, oView;
     Spinner spinner;
-    List<String> items;
+
 
 
 
@@ -61,23 +61,10 @@ public class ConfirmActivity extends AppCompatActivity {
         iView.setText(checkIn);
         oView.setText(checkOut);
 
-        items = new ArrayList<>();
 
-        items.add("--Select--");
-        items.add("Azalea");
-        items.add("Japanese");
-        items.add("Deluxe");
 
-        spinner.setAdapter(new ArrayAdapter<>(ConfirmActivity.this,
-                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items
-        ));
+        String room = spinner.getSelectedItem().toString();
 
-        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                items = items.get(position);
-            }
-        });
 
 
 
@@ -103,4 +90,6 @@ public class ConfirmActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+
 }
