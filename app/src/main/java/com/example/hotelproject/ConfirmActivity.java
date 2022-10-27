@@ -9,13 +9,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ConfirmActivity extends AppCompatActivity {
     Button proceed;
     Button back;
-    String name,contact,numberofpersons,checkIn,checkOut,roomType;
+    String name,contact,numberofpersons,checkIn,checkOut;
     TextView nView, cView, pView, iView, oView;
+    Spinner spinner;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,9 @@ public class ConfirmActivity extends AppCompatActivity {
         pView = findViewById(R.id.paxView);
         iView = findViewById(R.id.inView);
         oView = findViewById(R.id.outView);
+        spinner = findViewById(R.id.selection);
+
+
 
         Intent i = getIntent();
         name = i.getStringExtra("name");
@@ -36,7 +46,7 @@ public class ConfirmActivity extends AppCompatActivity {
         numberofpersons = i.getStringExtra("numberofpersons");
         checkIn = i.getStringExtra("checkin");
         checkOut = i.getStringExtra("checkout");
-        roomType = i.getStringExtra("roomType");
+
 
 
         nView.setText(name);
@@ -45,11 +55,22 @@ public class ConfirmActivity extends AppCompatActivity {
         iView.setText(checkIn);
         oView.setText(checkOut);
 
+        String text = spinner.getSelectedItem().toString();
 
 
-
-
-
+        proceed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ConfirmActivity.this,PaymentActivity.class);
+                intent.putExtra("roomtype",text);
+                intent.putExtra("name",name);
+                intent.putExtra("contact",contact);
+                intent.putExtra("numberofpersons",numberofpersons);
+                intent.putExtra("checkin",checkIn);
+                intent.putExtra("checkout",checkOut);
+                startActivity(intent);
+            }
+        });
 
 
 
