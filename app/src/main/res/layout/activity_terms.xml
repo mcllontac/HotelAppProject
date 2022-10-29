@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/t"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#D2001A"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView29"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:layout_weight="1"
             android:paddingBottom="25dp"
@@ -25,65 +27,128 @@
             android:shadowDx="5"
             android:shadowDy="5"
             android:shadowRadius="0.01"
-            android:text="TERMS AND CONDITIONS"
+            android:text="About Us"
             android:textAlignment="center"
             android:textColor="#FFDE00"
             android:textSize="27sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="25dp"
-            android:layout_weight="1"
-            android:background="@drawable/shadows"
-            android:backgroundTint="#FFFAE7"
-            android:elevation="10dp"
-            android:text="This Application (estore.togo.com.ph) (&quot;this Site&quot; or “TOGO eStore”) is owned and operated by TOGO Philippines Co., Ltd. (&quot;TOGO&quot;) in Philippines. Access to and use of this App and related services (collectively, the “Services”) are made available to you in accordance with the following Terms &amp; Conditions and any other rules, policies and privacy policy posted on the App. By using the Services, such as browsing or placing orders on this App, you are agreeing to all of the Terms and Conditions and that you accept and agree to be bound by them."
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp"
+                android:padding="20dp">
 
-        <Button
-            android:id="@+id/btnAgree"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#FFDE00"
-            android:text="I Agree"
-            android:textColor="#000000"
-            android:textStyle="bold" />
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:padding="10dp"
+                        android:text="Hotel TOGO was founded in 2022 by two individuals who decided to come together to satisfy the public's growing clamor for a better and more convenient low-cost lodging. One was a hotel professional with over 20 years of experience in a leading motel chain, while the other was a commercial developer and an &quot;AAA&quot; licensed contractor."
+                        android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/btnBack"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#FFDE00"
-            android:text="Back"
-            android:textColor="#000000"
-            android:textStyle="bold" />
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:padding="10dp"
+                        android:text="The following year, in October 2022, they opened the first Hotel TOGO with the primary commitment of providing guests with top-notch lodging facilities and services which anchor on the following values: Cleanliness, Innovation, Efficiency, Courtesy, Discipline, and Teamwork."
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="expand"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPaddingBottom="20dp">
+
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:animateLayoutChanges="true">
+
+                    <TextView
+                        android:id="@+id/terms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Terms and Conditions"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:padding="10dp"
+                        android:text="This Application (estore.togo.com.ph) (&quot;this Site&quot; or “TOGO eStore”) is owned and operated by TOGO Philippines Co., Ltd. (&quot;TOGO&quot;) in Philippines. Access to and use of this App and related services (collectively, the “Services”) are made available to you in accordance with the following Terms &amp; Conditions and any other rules, policies and privacy policy posted on the App. By using the Services, such as browsing or placing orders on this App, you are agreeing to all of the Terms and Conditions and that you accept and agree to be bound by them."
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnAgree"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFDE00"
+                    android:text="I Agree"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFDE00"
+                    android:text="Back"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
