@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         FrameLayout dragsheets = findViewById(R.id.sheet);
 
         bottomSheetBehavior = BottomSheetBehavior.from(dragsheets);
+        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
 
         btn1 = findViewById(R.id.button);
         btn2 = findViewById(R.id.button2);
