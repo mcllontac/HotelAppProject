@@ -1,11 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEFEF"
+    android:background="#D2001A"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="157dp"
+            android:layout_height="151dp"
+            android:layout_marginTop="24dp"
+            android:alpha=".8"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="299dp"
+            android:background="#D2001A"
+            android:filterTouchesWhenObscured="false"
+            android:fontFamily="sans-serif-black"
+            android:lineSpacingExtra="8sp"
+            android:paddingTop="150dp"
+            android:shadowColor="#DD020202"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="0.01"
+            android:text="Welcome to TOGO"
+            android:textAlignment="center"
+            android:textColor="#FFDE00"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="422dp"
+            android:layout_height="186dp"
+            android:paddingTop="50dp"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="0.01"
+            android:text="Too Clean Too Good."
+            android:textAlignment="center"
+            android:textColor="#FFDE00"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="®2022-2023 Hotel TOGO. All Rights Reserved"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/cornersround"
+        android:backgroundTint="#EFEFEF">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:foreground="@drawable/smallercornersround"
+            android:foregroundTint="#FFDE00"
+            app:srcCompat="@android:drawable/button_onoff_indicator_off" />
+    </FrameLayout>
 
     <Button
         android:id="@+id/button"
@@ -15,13 +91,7 @@
         android:text="Book a Reservation"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button2"
@@ -32,80 +102,6 @@
         android:text="Reservations"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.652" />
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="299dp"
-        android:background="#D2001A"
-        android:filterTouchesWhenObscured="false"
-        android:fontFamily="sans-serif-black"
-        android:lineSpacingExtra="8sp"
-        android:paddingTop="150dp"
-        android:shadowColor="#DD020202"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="0.01"
-        android:text="Welcome to TOGO"
-        android:textAlignment="center"
-        android:textColor="#FFDE00"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="157dp"
-        android:layout_height="151dp"
-        android:layout_marginTop="24dp"
-        android:alpha=".8"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="422dp"
-        android:layout_height="186dp"
-        android:paddingTop="50dp"
-        android:shadowColor="#000000"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="0.01"
-        android:text="Too Clean Too Good."
-        android:textAlignment="center"
-        android:textColor="#FFDE00"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.304" />
-
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="®2022-2023 Hotel TOGO. All Rights Reserved"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.766" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

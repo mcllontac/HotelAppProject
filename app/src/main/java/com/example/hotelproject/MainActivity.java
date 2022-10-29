@@ -6,8 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private BottomSheetBehavior bottomSheetBehavior;
 
     Button btn1;
     Button btn2;
@@ -16,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FrameLayout dragsheets = findViewById(R.id.sheet);
+
+        bottomSheetBehavior = BottomSheetBehavior.from(dragsheets);
 
         btn1 = findViewById(R.id.button);
         btn2 = findViewById(R.id.button2);
