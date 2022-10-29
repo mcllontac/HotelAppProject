@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -19,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.Random;
 
 public class FormActivity extends AppCompatActivity {
 
@@ -27,6 +29,9 @@ public class FormActivity extends AppCompatActivity {
     EditText checkIn, checkOut, name, contact, persons;
     Button next;
     Button prev;
+    Helper DB;
+    Spinner spinner;
+    TextView refNo;
 
 
 
@@ -43,6 +48,10 @@ public class FormActivity extends AppCompatActivity {
         persons = findViewById(R.id.numPeople);
         next = findViewById(R.id.btnNext);
         prev = findViewById(R.id.btnPrev);
+        spinner = findViewById(R.id.selection);
+        refNo = findViewById(R.id.refNum);
+
+        DB = new Helper(this);
 
         DatePickerDialog.OnDateSetListener InDate = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -80,25 +89,31 @@ public class FormActivity extends AppCompatActivity {
             }
         });
 
-        next.setOnClickListener(new View.OnClickListener() {
+        refNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FormActivity.this,RoomsActivity.class);
-                intent.putExtra("name",name.getText().toString());
-                intent.putExtra("contact",contact.getText().toString());
-                intent.putExtra("numberofpersons",persons.getText().toString());
-                intent.putExtra("checkin",checkIn.getText().toString());
-                intent.putExtra("checkout",checkOut.getText().toString());
-                startActivity(intent);
+                Random random = new Random();
+                int val = random.nextInt(999999999-100000000)+100000000;
+                refNo.setText((Integer.toString(val)));
             }
         });
 
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nameTXT = name.getText().toString();
+                String contactTXT = contact.getText().toString();
+                String doiTXT = checkIn.getText().toString();
+                String dooTXT = checkOut.getText().toString();
+                String paxTXT = persons.getText().toString();
+                String rtypeTXT = spinner.getSelectedItem().toString();
+                String rnumTXT = refNo.getText().toString();
 
-
-
-
-
-
+                DB.insertReservationdata(nameTXT, contactTXT, doiTXT, dooTXT, paxTXT, rtypeTXT, rnumTXT);
+                Intent intent = new Intent(FormActivity.this,ReferenceNumActivity.class);
+                startActivity(intent);
+            }
+        });
 
         prev.setOnClickListener(view -> {
             Intent i = new Intent(getApplicationContext(), TermsActivity.class);

@@ -28,10 +28,8 @@
                 android:value="" />
         </activity>
 
-        <activity android:name=".ConfirmActivity"/>
         <activity android:name=".FormActivity"/>
         <activity android:name=".PaymentActivity"/>
-        <activity android:name=".ReferenceActivity"/>
         <activity android:name=".ReferenceNumActivity"/>
         <activity android:name=".ReservationsActivity"/>
         <activity android:name=".RoomsActivity"/>

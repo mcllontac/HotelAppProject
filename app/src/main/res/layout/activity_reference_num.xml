@@ -46,11 +46,12 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
-            android:hint="Enter Reference Number Here"
+            android:hint="Enter Name of Hotel Reserver"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
