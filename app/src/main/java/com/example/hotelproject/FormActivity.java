@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +28,8 @@ public class FormActivity extends AppCompatActivity {
     EditText checkIn, checkOut, name, contact, persons;
     Button next;
     Button prev;
+    Helper DB;
+    Spinner spinner;
 
 
 
@@ -43,6 +46,9 @@ public class FormActivity extends AppCompatActivity {
         persons = findViewById(R.id.numPeople);
         next = findViewById(R.id.btnNext);
         prev = findViewById(R.id.btnPrev);
+        spinner = findViewById(R.id.selection);
+
+        DB = new Helper(this);
 
         DatePickerDialog.OnDateSetListener InDate = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -83,12 +89,15 @@ public class FormActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FormActivity.this,RoomsActivity.class);
-                intent.putExtra("name",name.getText().toString());
-                intent.putExtra("contact",contact.getText().toString());
-                intent.putExtra("numberofpersons",persons.getText().toString());
-                intent.putExtra("checkin",checkIn.getText().toString());
-                intent.putExtra("checkout",checkOut.getText().toString());
+                String nameTXT = name.getText().toString();
+                String contactTXT = contact.getText().toString();
+                String doiTXT = checkIn.getText().toString();
+                String dooTXT = checkOut.getText().toString();
+                String paxTXT = persons.getText().toString();
+                String rtypeTXT = spinner.getSelectedItem().toString();
+
+                DB.insertReservationdata(nameTXT, contactTXT, doiTXT, dooTXT, paxTXT, rtypeTXT);
+                Intent intent = new Intent(FormActivity.this,ReferenceNumActivity.class);
                 startActivity(intent);
             }
         });

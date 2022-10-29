@@ -21,7 +21,7 @@ public class TermsActivity extends AppCompatActivity {
         back = findViewById(R.id.btnBack);
 
         agree.setOnClickListener(view -> {
-            Intent i = new Intent(getApplicationContext(),FormActivity.class);
+            Intent i = new Intent(getApplicationContext(),RoomsActivity.class);
             startActivity(i);
         });
 

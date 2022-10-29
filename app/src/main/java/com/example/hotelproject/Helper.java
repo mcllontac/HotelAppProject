@@ -1,73 +1,51 @@
 package com.example.hotelproject;
 
-public class Helper {
-    String name, contact, checkIn, checkOut, persons, room, rnum;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
+import androidx.annotation.Nullable;
 
+public class Helper extends SQLiteOpenHelper {
 
-    public Helper(String name, String contact, String checkIn, String checkOut, String persons, String room, String rnum) {
-        this.name = name;
-        this.contact = contact;
-        this.checkIn = checkIn;
-        this.checkOut = checkOut;
-        this.persons = persons;
-        this.room = room;
-        this.rnum = rnum;
+    public Helper(Context context) {
+        super(context, "Reservation.db", null,1);
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public void onCreate(SQLiteDatabase DB) {
+        DB.execSQL("create Table Reservationdetails(name TEXT primary key, contact TEXT, doi TEXT, doo TEXT, pax TEXT, rtype TEXT)");
+
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void onUpgrade(SQLiteDatabase DB, int i, int i1) {
+        DB.execSQL("drop Table if exists Reservationdetails");
+
     }
 
-    public String getContact() {
-        return contact;
+    public Boolean insertReservationdata(String name, String contact, String doi, String doo, String pax, String rtype) {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", name);
+        contentValues.put("contact", contact);
+        contentValues.put("doi", doi);
+        contentValues.put("doo", doo);
+        contentValues.put("pax", pax);
+        contentValues.put("rtype", rtype);
+        long result=DB.insert("Reservationdetails", null, contentValues);
+        if(result==1){
+            return false;
+        } else{
+            return true;
+        }
     }
+    public Cursor getdata() {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor =DB.rawQuery("Select * from Reservationdetails", null);
+        return cursor;
 
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    public String getCheckIn() {
-        return checkIn;
-    }
-
-    public void setCheckIn(String checkIn) {
-        this.checkIn = checkIn;
-    }
-
-    public String getCheckOut() {
-        return checkOut;
-    }
-
-    public void setCheckOut(String checkOut) {
-        this.checkOut = checkOut;
-    }
-
-    public String getPersons() {
-        return persons;
-    }
-
-    public void setPersons(String persons) {
-        this.persons = persons;
-    }
-
-    public String getRoom() {
-        return room;
-    }
-
-    public String getRnum() {
-        return rnum;
-    }
-
-    public void setRnum(String rnum) {
-        this.rnum = rnum;
-    }
-
-    public void setRoom(String room) {
-        this.room = room;
     }
 }

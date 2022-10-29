@@ -29,13 +29,7 @@ public class PaymentActivity extends AppCompatActivity {
         change = findViewById(R.id.Change);
         pay = findViewById(R.id.payment);
 
-        Intent i = getIntent();
-        name = i.getStringExtra("name");
-        contact = i.getStringExtra("contact");
-        persons = i.getStringExtra("numberofpersons");
-        checkIn = i.getStringExtra("checkin");
-        checkOut = i.getStringExtra("checkout");
-        room = i.getStringExtra("roomtype");
+
 
 
 
@@ -44,13 +38,7 @@ public class PaymentActivity extends AppCompatActivity {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nintent = new Intent(PaymentActivity.this,ReferenceActivity.class);
-                nintent.putExtra("roomtype",room);
-                nintent.putExtra("name",name);
-                nintent.putExtra("contact",contact);
-                nintent.putExtra("numberofpersons",persons);
-                nintent.putExtra("checkin",checkIn);
-                nintent.putExtra("checkout",checkOut);
+                Intent nintent = new Intent(PaymentActivity.this,ReservationsActivity.class);
                 startActivity(nintent);
             }
         });
@@ -60,7 +48,7 @@ public class PaymentActivity extends AppCompatActivity {
 
 
         back.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),ConfirmActivity.class);
+            Intent intent = new Intent(getApplicationContext(),FormActivity.class);
             startActivity(intent);
         });
     }
