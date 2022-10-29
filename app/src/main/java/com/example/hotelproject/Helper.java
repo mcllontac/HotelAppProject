@@ -36,7 +36,7 @@ public class Helper extends SQLiteOpenHelper {
         contentValues.put("pax", pax);
         contentValues.put("rtype", rtype);
         long result=DB.insert("Reservationdetails", null, contentValues);
-        if(result==1){
+        if(result==-1){
             return false;
         } else{
             return true;
