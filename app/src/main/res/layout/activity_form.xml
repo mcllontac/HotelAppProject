@@ -122,10 +122,27 @@
                 android:id="@+id/selection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="5dp"
                 android:background="@android:drawable/btn_dropdown"
                 android:entries="@array/room"
                 android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/refNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:backgroundTint="@color/black"
+                android:drawableStart="@drawable/reference"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:drawableTint="@color/teal_700"
+                android:hint="Click to Generate Ref.No."
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
         </LinearLayout>
 
         <LinearLayout

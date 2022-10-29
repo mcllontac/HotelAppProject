@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.Random;
 
 public class FormActivity extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class FormActivity extends AppCompatActivity {
     Button prev;
     Helper DB;
     Spinner spinner;
+    TextView refNo;
 
 
 
@@ -47,6 +49,7 @@ public class FormActivity extends AppCompatActivity {
         next = findViewById(R.id.btnNext);
         prev = findViewById(R.id.btnPrev);
         spinner = findViewById(R.id.selection);
+        refNo = findViewById(R.id.refNum);
 
         DB = new Helper(this);
 
@@ -86,6 +89,15 @@ public class FormActivity extends AppCompatActivity {
             }
         });
 
+        refNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random random = new Random();
+                int val = random.nextInt(999999999-100000000)+100000000;
+                refNo.setText((Integer.toString(val)));
+            }
+        });
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,19 +107,13 @@ public class FormActivity extends AppCompatActivity {
                 String dooTXT = checkOut.getText().toString();
                 String paxTXT = persons.getText().toString();
                 String rtypeTXT = spinner.getSelectedItem().toString();
+                String rnumTXT = refNo.getText().toString();
 
-                DB.insertReservationdata(nameTXT, contactTXT, doiTXT, dooTXT, paxTXT, rtypeTXT);
+                DB.insertReservationdata(nameTXT, contactTXT, doiTXT, dooTXT, paxTXT, rtypeTXT, rnumTXT);
                 Intent intent = new Intent(FormActivity.this,ReferenceNumActivity.class);
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
-
 
         prev.setOnClickListener(view -> {
             Intent i = new Intent(getApplicationContext(), TermsActivity.class);

@@ -26,7 +26,7 @@ public class Helper extends SQLiteOpenHelper {
 
     }
 
-    public Boolean insertReservationdata(String name, String contact, String doi, String doo, String pax, String rtype) {
+    public Boolean insertReservationdata(String name, String contact, String doi, String doo, String pax, String rtype, String rnum) {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("name", name);
@@ -35,6 +35,7 @@ public class Helper extends SQLiteOpenHelper {
         contentValues.put("doo", doo);
         contentValues.put("pax", pax);
         contentValues.put("rtype", rtype);
+        contentValues.put("rnum", rnum);
         long result=DB.insert("Reservationdetails", null, contentValues);
         if(result==-1){
             return false;
@@ -42,10 +43,13 @@ public class Helper extends SQLiteOpenHelper {
             return true;
         }
     }
-    public Cursor getdata() {
+    public Boolean checkName(String name) {
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor =DB.rawQuery("Select * from Reservationdetails", null);
-        return cursor;
+        Cursor cursor =DB.rawQuery("Select * from Reservationdetails where name = ?", new String[] {name});
+        if(cursor.getCount()>0)
+            return true;
+        else
+            return false;
 
     }
 }
