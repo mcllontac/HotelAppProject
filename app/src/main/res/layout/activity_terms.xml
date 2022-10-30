@@ -64,6 +64,7 @@
                         android:justificationMode="inter_word"
                         android:padding="10dp"
                         android:text="Hotel TOGO was founded in 2022 by two individuals who decided to come together to satisfy the public's growing clamor for a better and more convenient low-cost lodging. One was a hotel professional with over 20 years of experience in a leading motel chain, while the other was a commercial developer and an &quot;AAA&quot; licensed contractor."
+                        android:textColor="#000000"
                         android:textSize="20sp" />
 
                     <TextView
@@ -73,6 +74,7 @@
                         android:justificationMode="inter_word"
                         android:padding="10dp"
                         android:text="The following year, in October 2022, they opened the first Hotel TOGO with the primary commitment of providing guests with top-notch lodging facilities and services which anchor on the following values: Cleanliness, Innovation, Efficiency, Courtesy, Discipline, and Teamwork."
+                        android:textColor="#000000"
                         android:textSize="20sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -100,6 +102,7 @@
                         android:layout_marginTop="15dp"
                         android:text="Terms and Conditions"
                         android:textAlignment="center"
+                        android:textColor="#D2001A"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
@@ -111,8 +114,9 @@
                         android:padding="10dp"
                         android:text="This Application (estore.togo.com.ph) (&quot;this Site&quot; or “TOGO eStore”) is owned and operated by TOGO Philippines Co., Ltd. (&quot;TOGO&quot;) in Philippines. Access to and use of this App and related services (collectively, the “Services”) are made available to you in accordance with the following Terms &amp; Conditions and any other rules, policies and privacy policy posted on the App. By using the Services, such as browsing or placing orders on this App, you are agreeing to all of the Terms and Conditions and that you accept and agree to be bound by them."
                         android:textAlignment="center"
+                        android:textColor="#000000"
                         android:textSize="20sp"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
