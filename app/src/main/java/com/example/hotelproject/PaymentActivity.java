@@ -14,10 +14,10 @@ public class PaymentActivity extends AppCompatActivity {
 
     Button confirm;
     Button back, btnpay;
-    TextView total, change;
+    TextView total;
     EditText pay;
     String name1, contact, persons, checkIn, checkOut, room, rnum;
-    public int cash, totalChange, stay, totalPay;
+
 
 
     @Override
@@ -28,7 +28,6 @@ public class PaymentActivity extends AppCompatActivity {
         confirm = findViewById(R.id.btnConfirm);
         back = findViewById(R.id.btnBack);
         total = findViewById(R.id.toPay);
-        change = findViewById(R.id.Change);
         pay = findViewById(R.id.payment);
         btnpay = findViewById(R.id.btnPay);
 
