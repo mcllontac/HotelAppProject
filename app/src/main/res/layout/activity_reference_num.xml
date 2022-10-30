@@ -36,11 +36,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <EditText
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
+            android:id="@+id/nameRes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="10dp"
@@ -52,21 +52,56 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/refNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="#FFFAE7"
+            android:hint="Enter Ref.No."
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:paddingTop="25dp">
 
         <Button
-            android:id="@+id/btnNext"
+            android:id="@+id/btnCheck"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFDE00"
-            android:text="Next"
+            android:text="Check"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000000" />
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFDE00"
+            android:text="View"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000000" />
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFDE00"
+            android:text="Home"
+            android:textStyle="bold"
+            android:textSize="20sp"
             android:textColor="#000000" />
     </LinearLayout>
 </LinearLayout>

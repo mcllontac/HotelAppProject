@@ -10,14 +10,24 @@ import android.widget.TextView;
 
 public class ReservationsActivity extends AppCompatActivity {
 
-    Button home;
-    String name, contact, persons, checkIn, checkOut, room;
-    TextView name1,contact1,persons1,checkIn1, checkOut1, room1;
+    Button next;
+    String name, contact, persons, checkIn, checkOut, room, rnum;
+    TextView name1, contact1, persons1, checkIn1, checkOut1, room1, refnum;
+    Helper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservations);
+
+        Intent i = getIntent();
+        name = i.getStringExtra("name");
+        contact = i.getStringExtra("contact");
+        persons = i.getStringExtra("pax");
+        checkIn = i.getStringExtra("doi");
+        checkOut = i.getStringExtra("doo");
+        room = i.getStringExtra("room");
+        rnum =  i.getStringExtra("rnum");
 
         name1 = findViewById(R.id.textName);
         contact1 = findViewById(R.id.textContact);
@@ -25,15 +35,23 @@ public class ReservationsActivity extends AppCompatActivity {
         checkIn1 = findViewById(R.id.textCheckIn);
         checkOut1 = findViewById(R.id.textCheckOut);
         room1 = findViewById(R.id.textRoom);
+        next = findViewById(R.id.btnNext);
+        refnum =findViewById(R.id.textRefnum);
+        DB = new Helper(this);
 
 
+        name1.setText(name);
+        contact1.setText(contact);
+        persons1.setText(persons);
+        checkIn1.setText(checkIn);
+        checkOut1.setText(checkOut);
+        room1.setText(room);
+        refnum.setText(rnum);
 
 
-        home = findViewById(R.id.btnHome);
-
-
-        home.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        next.setOnClickListener(view -> {
+            DB.insertReservationdata(name, contact, checkIn, checkOut, persons, room, rnum);
+            Intent intent = new Intent(getApplicationContext(), ReferenceNumActivity.class);
             startActivity(intent);
         });
 

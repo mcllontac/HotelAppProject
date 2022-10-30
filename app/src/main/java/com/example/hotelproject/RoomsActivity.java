@@ -19,11 +19,6 @@ public class RoomsActivity extends AppCompatActivity {
     ImageView room2;
     ImageView room3;
 
-
-
-    String name,contact,persons,checkIn,checkOut;
-
-
     Button next;
     Button prev;
 

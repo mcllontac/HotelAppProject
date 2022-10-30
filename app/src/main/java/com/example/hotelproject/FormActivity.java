@@ -13,12 +13,14 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 
@@ -32,8 +34,8 @@ public class FormActivity extends AppCompatActivity {
     Helper DB;
     Spinner spinner;
     TextView refNo;
-
-
+    Date day1, day2;
+    public static int stay;
 
 
     @Override
@@ -50,6 +52,8 @@ public class FormActivity extends AppCompatActivity {
         prev = findViewById(R.id.btnPrev);
         spinner = findViewById(R.id.selection);
         refNo = findViewById(R.id.refNum);
+        day1 = myCalendar.getTime();
+        day2 = myCalendar.getTime();
 
         DB = new Helper(this);
 
@@ -67,6 +71,7 @@ public class FormActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatePickerDialog inDate = new DatePickerDialog(FormActivity.this, InDate, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
+                inDate.getDatePicker().setMinDate((System.currentTimeMillis()));
                 inDate.show();
             }
         });
@@ -81,10 +86,13 @@ public class FormActivity extends AppCompatActivity {
             }
         };
 
+
+
         checkOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DatePickerDialog outDate = new DatePickerDialog(FormActivity.this, OutDate, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
+                outDate.getDatePicker().setMinDate(day2.getTime()+(1000*60*60*24));
                 outDate.show();
             }
         });
@@ -93,10 +101,12 @@ public class FormActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Random random = new Random();
-                int val = random.nextInt(999999999-100000000)+100000000;
+                int val = random.nextInt(999999999 - 100000000) + 100000000;
                 refNo.setText((Integer.toString(val)));
             }
         });
+
+
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,9 +119,20 @@ public class FormActivity extends AppCompatActivity {
                 String rtypeTXT = spinner.getSelectedItem().toString();
                 String rnumTXT = refNo.getText().toString();
 
-                DB.insertReservationdata(nameTXT, contactTXT, doiTXT, dooTXT, paxTXT, rtypeTXT, rnumTXT);
-                Intent intent = new Intent(FormActivity.this,ReferenceNumActivity.class);
-                startActivity(intent);
+
+                if (nameTXT.equals("") || contactTXT.equals("") || doiTXT.equals("") || dooTXT.equals("") || paxTXT.equals("") || rtypeTXT.equals("") || rnumTXT.equals(""))
+                    Toast.makeText(FormActivity.this, "Please make sure all fields are answered.", Toast.LENGTH_SHORT).show();
+                else {
+                    Intent intent = new Intent(FormActivity.this, PaymentActivity.class);
+                    intent.putExtra("name", nameTXT);
+                    intent.putExtra("contact", contactTXT);
+                    intent.putExtra("doi", doiTXT);
+                    intent.putExtra("doo", dooTXT);
+                    intent.putExtra("pax", paxTXT);
+                    intent.putExtra("room", rtypeTXT);
+                    intent.putExtra("rnum", rnumTXT);
+                    startActivity(intent);
+                }
             }
         });
 

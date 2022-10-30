@@ -6,17 +6,15 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
 public class Helper extends SQLiteOpenHelper {
 
     public Helper(Context context) {
-        super(context, "Reservation.db", null,1);
+        super(context, "Details.db", null,1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
-        DB.execSQL("create Table Reservationdetails(name TEXT primary key, contact TEXT, doi TEXT, doo TEXT, pax TEXT, rtype TEXT)");
+        DB.execSQL("create Table Reservationdetails(name TEXT primary key, contact TEXT, doi TEXT, doo TEXT, pax TEXT, rtype TEXT, rnum TEXT)");
 
     }
 
@@ -39,17 +37,30 @@ public class Helper extends SQLiteOpenHelper {
         long result=DB.insert("Reservationdetails", null, contentValues);
         if(result==-1){
             return false;
-        } else{
+        } else
             return true;
-        }
+
     }
     public Boolean checkName(String name) {
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor =DB.rawQuery("Select * from Reservationdetails where name = ?", new String[] {name});
-        if(cursor.getCount()>0)
+        Cursor cursor = DB.rawQuery("Select * from Reservationdetails where name = ?", new String[] {name});
+        if(cursor.getCount() > 0)
             return true;
         else
             return false;
 
+    }
+    public Boolean checkNameRnum(String name, String rnum) {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select * from Reservationdetails where name = ? and rnum =?", new String[] {name, rnum});
+        if (cursor.getCount() > 0)
+            return true;
+        else
+            return false;
+    }
+    public Cursor viewData(String name, String rnum){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select * from Reservationdetails where name =? and rnum =?",new String[] {name, rnum} );
+        return cursor;
     }
 }
