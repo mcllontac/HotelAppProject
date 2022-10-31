@@ -31,8 +31,8 @@
             android:fontFamily="sans-serif-black"
             android:lineSpacingExtra="8sp"
             android:shadowColor="#DD020202"
-            android:shadowDx="5"
-            android:shadowDy="5"
+            android:shadowDx="2"
+            android:shadowDy="2"
             android:shadowRadius="0.01"
             android:text="Welcome to TOGO"
             android:textAlignment="center"
@@ -41,12 +41,30 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D2001A"
+            android:filterTouchesWhenObscured="false"
+            android:fontFamily="sans-serif-black"
+            android:lineSpacingExtra="8sp"
+            android:shadowColor="#DD020202"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="0.01"
+            android:text="ホテル 東郷"
+            android:textAlignment="center"
+            android:textColor="#FFDE00"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="25dp"
             android:shadowColor="#000000"
-            android:shadowDx="3"
+            android:shadowDx="2"
             android:shadowDy="3"
             android:shadowRadius="0.01"
             android:text="Too Clean Too Good."
