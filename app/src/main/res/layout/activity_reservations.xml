@@ -245,7 +245,7 @@
             android:layout_weight="1"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:text="Room Type"
+            android:text="Reference No."
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -253,15 +253,15 @@
             android:id="@+id/textRefnum"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="#FFFAE7"
-            android:hint="Reference No."
+            android:hint="Reference No. Details"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
